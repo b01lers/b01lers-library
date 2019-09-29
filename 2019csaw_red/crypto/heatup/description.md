@@ -1,0 +1,1 @@
+Welcome to roll your own crypto, it's exactly as good as it sounds
