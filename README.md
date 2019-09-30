@@ -9,7 +9,7 @@ This repo is a library of all the (obtainable) challenges from each past CTF we'
 b01lers-libary/ (root dir)
 b01lers-library/<YEAR>[ctf_name] (ctf_name should be lower-snake cased)
 b01lers-library/<YEAR>[ctf_name]/<category>/ (category should be re/pwn/web/crypto/etc)
-b01lers-library/<YEAR>[ctf_name]/<category>/<challenge_name>/ (challenge name should be the same as on the site)
+b01lers-library/<YEAR>[ctf_name]/<category>/<point_val>-<challenge_name>/ (challenge name should be the same as on the site)
 ```
 
 # Contributing
