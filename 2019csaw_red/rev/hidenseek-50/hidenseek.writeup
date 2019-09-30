@@ -1,0 +1,8 @@
+So we have a binary that prints Hello World.
+
+We also have a function that pulls from a lookup table and prints *something*. 
+
+I guessed that this was the flag and patched the call to printf to call hidden instead.
+
+Run the patched binary and we just get the flag!
+
