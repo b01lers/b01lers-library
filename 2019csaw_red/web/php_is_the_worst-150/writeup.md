@@ -1,0 +1,1 @@
+Looking at the PHP code tells us that they're using md5 (not sha256 as they claim, but it doesn't matter) to compare two different inputs. We must hash both inputs to the same value. Let' take advantage of the fact that PHP comprison is vulnerable to 0e<anything> == 0e<anything>. We grab a couple hash inputs from https://github.com/spaze/hashes and bingo.

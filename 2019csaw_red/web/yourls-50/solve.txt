@@ -1,0 +1,1 @@
+The server checks to see if the request is to an address that matches 'localhost', '127.0.0.1', and '0.0.0.0', however these are not the only valid localhost addresses. If we google "valid localhost addresses", we find that any address inside 127.0.0.1-127.255.255.255 is valid localhost. So we can request http://127.1.1.1/flag.txt and get the flag!
