@@ -1,0 +1,49 @@
+import sys
+import binascii
+from Crypto.Cipher import AES
+import base64
+
+
+def encrypt(key, text):
+	s = ''
+	for i in range(len(text)):
+		p = ord(text[i])
+		k = ord(key[i % len(key)])
+		print("plain: {} key: {}".format(hex(p), hex(k)))
+		p = p - 0x20
+		k = k - 0x20
+		print("splain: {} skey: {}".format(hex(p), hex(k)))
+		a = p + k
+		print("addition: {}".format(hex(a)))
+		a = a % (0x7e - 0x20 + 1)
+		print("after mod: {}".format(hex(a)))
+		a = a + 0x20
+		print("after add: {}".format(hex(a)))
+
+		s += chr((((ord(text[i]) - 0x20) + (ord(key[i % len(key)]) - 0x20)) % (0x7e - 0x20 + 1)) + 0x20)
+	return s
+
+
+key1 = "SECCON"
+key2 = "seccon2019"
+text = sys.argv[1]
+
+print("t:"+str(binascii.hexlify(bytearray(text, 'utf-8'))))
+
+enc1 = encrypt(key1, text)
+
+print("1:"+str(binascii.hexlify(bytearray(enc1, 'utf-8'))))
+
+cipher = AES.new(key2 + chr(0x00) * (16 - (len(key2) % 16)), AES.MODE_ECB)
+
+print("k:"+str(key2 + chr(0x00) * (16 - (len(key2) % 16))))
+
+p = 16 - (len(enc1) % 16)
+
+print("p:"+str(p))
+
+enc2 = cipher.encrypt(enc1 + chr(p) * p)
+
+print("2:"+str(binascii.hexlify(bytearray(enc2))))
+
+print(base64.b64encode(enc2).decode('ascii'))
