@@ -1,0 +1,186 @@
+#!/usr/bin/zsh
+# zsh TCP server
+
+typeset -A actions
+actions[start]="start"
+actions[set_date]="set_date"
+actions[set_destination]="set_destination"
+actions[load_fuel]="load_fuel"
+actions[accelerate]="accelerate"
+actions[shutdown]="shutdown"
+actions[exit]="shutdown"
+#actions["shell"]="zsh"
+
+start() {
+	if [[ $stat -eq 0 ]]
+	then
+		stat=1
+		tcp_send "=== Starting TimeOS ==="
+		sleep 1
+		tcp_send "Start successful"
+		tcp_send "The timeweather is currently at ${(j. .)timeweather} s/d"
+	else
+		tcp_send "Already started"
+	fi
+}
+
+
+accelerate() {
+	if [[ fuel_value -eq 0 ]]; then
+		tcp_send "Pfff... No fuel"
+		return
+	fi
+	tcp_read -b || shutdown
+	typeset -a input
+	TCP_LINE=${(r.100.. .)TCP_LINE}
+	for i in $(seq 1 10); do
+		for j in $(seq 1 10); do
+			input+=$TCP_LINE[$((i+(j-1)*10))]
+		done
+	done
+	(
+		export PATH="/challenge/bin"
+		setopt -r
+		disable '.' autoload enable fc hash setopt source trap zcompile zmodload
+		eval ${(j..)input}
+	) 2>&1 | tcp_send -c
+	shutdown
+}
+
+
+load_fuel() {
+	if [[ -z date || -z destination ]]; then
+		tcp_send "Coordinates not set"
+		return
+	fi
+	tcp_send "Select your fuel cells"
+	sum=0
+	((target=(date+destination)%2000-100))
+	elements=()
+	while [[ $sum -lt $target ]]; do
+		x=$(shuf -i 1-100 -n1)
+		elements+=$x
+		((sum+=x))
+	done
+	elements+=$(((date+destination)%2000-sum))
+	elements+=($(shuf -i 1-100 -n100 -r))
+
+	elements=($(shuf -e $elements))
+	tcp_send "$elements"
+	tcp_read -b || shutdown
+	indexes=($(tr -dc '0-9 '<<<"$TCP_LINE"))
+	fuel_value=0
+	for i in $indexes; do
+		((fuel_value+=${elements[i]}))
+		elements[i]=0
+	done
+	if [[ $fuel_value = $(((date+destination)%2000)) ]]; then
+		tcp_send "Seems ok"
+	else
+		tcp_send "That won't work"
+		tcp_send "Dumping loaded fuel"
+		fuel_value=0
+	fi
+}
+
+unload_fuel() {
+	fuel_value=0
+}
+
+set_date() {
+	if [[ stat -le 0 ]]; then
+		return
+	fi
+	if [[ fuel_value -ne 0 ]]; then
+		tcp_send "Can't change speed value when fuel is loaded"
+		return
+	fi
+	tcp_send "Enter speed modifiers (5)"
+	tcp_read -b || shutdown
+	dates=($(tr -dc '0-9 '<<<"$TCP_LINE"))
+	y=$(echo -n ${(g--):-\\\\x${(j.\\x.)dates}})
+	tcp_send "Safety check"
+	spinner='/|\-'
+	for i in $(seq 1 5); do
+		for i in $(seq 1 4); do
+			tcp_send -n -- "${spinner[$i]}"
+			tcp_send -n ${(g**):-"\010"}
+			sleep 0.2
+		done
+	done
+	if [[ ${(j++)${(s,0,)y}} = "e4sy 8D" ]]; then
+		date=$dates[1]
+		tcp_send "Success!!!"
+	else
+		tcp_send "Detected critical error"
+		unset date
+	fi
+}
+
+set_destination() {
+	if [[ stat -le 0 ]]; then
+		return
+	fi
+	if [[ fuel_value -ne 0 ]]; then
+		tcp_send "Can't change drift when fuel is loaded"
+		return
+	fi
+	autoload -U zcalc
+	tcp_send "Enter drift compensation"
+	tcp_read -b || shutdown
+	destination=$(tr -dc '0-9'<<<"$TCP_LINE")
+	if [[ $(zcalc -e -r 1063172470 17864741 5 $RANDOM $destination 75 / - xy '**' xy - '&' '[##36]' | tail -n1) = "HACKLU" ]]; then
+		tcp_send "zciweisakuŁ"
+	else
+		tcp_send "You really don't want to go there."
+		unset destination
+	fi
+}
+
+shutdown() {
+	tcp_close
+	kill $alarm
+	exit
+}
+
+handle_client() {
+	ztcp -c $1
+	zmodload zsh/system
+	(tcp_close; sleep 60; kill $sysparams[ppid]) &
+	alarm=$!
+	RANDOM=$(shuf -i 1-32767 -n 1)
+	timeweather=($(for i in $(seq 1 10); do echo $RANDOM; done))
+	fuel_value=0
+	tcp_send "Welcome."
+	tcp_send "Here is the time machine."
+	tcp_send "We need this to go back in time and save the world."
+	tcp_send "Can you help me start it?"
+	stat=0
+	while true; do
+		tcp_send "coose an action"
+		tcp_read -b || shutdown
+		action=${actions[$TCP_LINE]}
+		if [[ -z $action ]]; then
+			tcp_send "Not a valid action"
+		else
+			$action
+		fi
+	done
+}
+
+zmodload zsh/net/tcp
+autoload -U tcp_open
+autoload -U tcp_log
+
+TCP_PROMPT=""
+TCP_SILENT=1
+
+if ! ztcp -l 5150; then
+	exit
+fi
+fd=$REPLY
+while true; do
+	tcp_open -a $fd
+	handle_client $fd &
+	tcp_close
+done
