@@ -1,0 +1,144 @@
+Common Patterns
+---------------
+
+RE:
+Transformation of input and then compare (such as strcmp) to static value/string
+  - Look at comparison value
+    - Either reverse transformation to get the correct input
+    - Use a tool (gdb) to help solve it for you
+
+Straight up comparison with weird check:
+  - Use gdb and break to find string in memory
+  - Or if there are system calls to check then use ltrace to find the arguments
+
+Lots of checks one after another
+  - Angr or z3 or constraint solve by hand
+
+  Ex prog:
+  char *input = get_input()
+  if (input[2] == 'b') {
+    if (input[14] == '0') {
+     if ...
+     .
+     . win_and_exit()
+     .
+    }
+  }
+
+  bad_section:
+    kill()
+
+Checking char by char
+  pintool - can count number of instructions executed (more instructions is better in this case)
+  Must do some manual rev to check if this will work
+
+Strings
+  ALWAYS CHECK BINARY FOR STRINGS
+
+Stack strings
+  Search mem during program run for interesting strings
+
+Use gdb to script out long loop checks and stuff like that
+
+PWN:
+gets/strcpy {fread/fgets/strncpy with too big of n}
+  - Stack overflow
+
+Protections:
+  NX - stack is non executable
+    - Cant put shellcode on stack (unless we mmap the stack to be executable)
+
+  Stack Canary - Magic value that sits right below the saved return address
+    - Prevents buffer overflows overwriting the saved ret address
+    - Leaking the stack canary counters this protection
+      - printf, arbitrary read etc...
+
+  PIE - Position Independent Execution
+    - Changes where the code is loaded so that offsets in binary do not match the offsets at runtime
+    - Need a leak in order to call any code that already exists in the binary
+
+  ASLR - Address Space Layout Randomization
+    - sections of program get thrown around at runtime (similar to PIE)
+    - Prevents you from calling libc without a leak
+
+  RELRO - RELocatable Read Only
+    - Prevents overwriting GOT entries to jump to arbitrary code
+
+  Fortify - Changes in well known functions to be more secure
+    - Printf without %n
+    - May not always work
+
+Look for:
+  Variables passed into functions that we control
+  Printf with your input as first argument (aka printf(buf))
+    - printf vulnerability where you control format string
+    - Send %x.%x.%x. and then seen if "%x.%x.%x." is printed or a whole bunch of hex values
+
+  First look at protections, this tells you what and cannot do (more or less)
+  Off by one errors (loops, copies, reads, underflow/overflow)
+
+  Checks against negative/out of bounds array indicies
+
+  UAF/Double Free
+    - Use valgrind
+    - Heap overflow
+    - Sequence of free/malloc
+    - ltrace w/ filter or grep
+    - USE VILLOC
+
+
+WEB:
+Submission forms
+  - Blind SQL Injection
+
+robots.txt
+
+view_source
+
+google dorks
+
+client side code
+  - check to see what it does on your side
+
+cookies
+  - could be base64 encoded or serialized data
+  
+cipher spec on connection
+  - padding oracle attack (same as CBC)
+  - some protocols are insecure (TLS 1)
+  
+outdated frameworks
+
+site origin policy
+
+php == vs === (type confusion)
+
+sanitization framework/type
+
+nmap (if they allow)
+
+look manually at common auth pages (/login.php, /security.txt etc)
+
+hidden tokens in forms
+  - CSRF token from script that we can call or get value from
+
+Crpyto(graphy):
+
+Classical Ciphers (substitution, caesar, etc)
+  Plug in online (cyberchef)
+
+AES:
+  - Lookup the block mode and then lookup attacks on it
+
+Homebrew crypto
+  - Some vuln in the algorithm (math based)
+
+RSA
+  - Small primes
+  - primes too close together
+  - small exponent and short message
+  - RSAtool
+
+Rolling XOR
+  - Use flag format to get part (or even all) of the key
+
