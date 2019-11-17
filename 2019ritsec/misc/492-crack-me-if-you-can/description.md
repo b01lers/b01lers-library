@@ -1,0 +1,1 @@
+literally solved by just pasting hashes into crackstation
