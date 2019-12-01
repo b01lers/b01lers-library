@@ -1,0 +1,352 @@
+{
+    "Crypto": {
+        "Crypto Infinite": {
+            "Description": "Crypto has been around forever. Does this challenge go on forever? Let us know in the comments below or find the flag to prove us wrong.\r\n\r\nnc chal.tuctf.com 30102", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 47, 
+            "Points": 499
+        }, 
+        "Something in Common": {
+            "Description": "We've managed to gather the details in the given file. We need a professional cryptographer to decipher the message. Are you up to the task?", 
+            "Files": [
+                "/files/5fe50cdf91e6485f18b1fde5ec7cfef4/rsa_details.txt?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjE2fQ.XeQ9PQ.XMCVNomuwTz4kD4Zi048hrUFMaM"
+            ], 
+            "Hint": [], 
+            "ID": 37, 
+            "Points": 405
+        }, 
+        "Sonic": {
+            "Description": "Gotta go fast\r\n\r\nnc chal.tuctf.com 30100", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 46, 
+            "Points": 455
+        }, 
+        "The Oracle": {
+            "Description": "The oracle knows all, and it's kinda chatty. Is it telling you something?\r\n\r\nnc chal.tuctf.com 30103", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 49, 
+            "Points": 499
+        }, 
+        "Warren": {
+            "Description": "A true cipher buffet lies ahead.\r\n\r\nnc chal.tuctf.com 30101", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 61, 
+            "Points": 433
+        }
+    }, 
+    "Mega": {
+        "Cup of Joe: The Server": {
+            "Description": "On the first leg of the journey, I was looking at all the life, there were plants and hills and rocks and things, there was java and mugs and caffeine.\r\n\r\nchal.tuctf.com:32000", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 42, 
+            "Points": 100
+        }
+    }, 
+    "Misc": {
+        "Ask and Ye<br>Shall Receive": {
+            "Description": "Ophelia FlagDeCotour just won a Hugo award! (Alongside hundreds of other people...) \r\nGo give her some congratulations.", 
+            "Files": [], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 24
+                }, 
+                {
+                    "cost": 0, 
+                    "id": 25
+                }
+            ], 
+            "ID": 33, 
+            "Points": 491
+        }, 
+        "Brain Games": {
+            "Description": "Time to go back to the basics... you remember those, right?\r\n\r\nnc chal.tuctf.com 30301", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 31, 
+            "Points": 494
+        }, 
+        "Onions": {
+            "Description": "Ogres are like files -- they have layers!", 
+            "Files": [
+                "/files/3d1ba50a3d7e8ff58bd1033451b57531/shrek.jpg?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjEzfQ.XeQ9QA.VL9ULUJkwXgClNfcaQEPaFKj-nE"
+            ], 
+            "Hint": [], 
+            "ID": 32, 
+            "Points": 432
+        }, 
+        "RNGeesus": {
+            "Description": "RNGeesus has a secret technique, can you guess it?\r\n\r\nnc chal.tuctf.com 30300", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 30, 
+            "Points": 449
+        }, 
+        "Red Yarn": {
+            "Description": "We like the simple things in life -- this file went back to the basics!", 
+            "Files": [
+                "/files/60a9251080f33414cab55f339ff62a0e/DEBUG.COM?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjE1fQ.XeQ9QA.As5r_Lt_bQsTkeH_-a7tKfMCp3o"
+            ], 
+            "Hint": [], 
+            "ID": 36, 
+            "Points": 151
+        }, 
+        "Super Secret": {
+            "Description": "Something's blocking my flag from this file...", 
+            "Files": [
+                "/files/d8ca346ea68038d29124b050f7f11f62/document.odt?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjE0fQ.XeQ9QA.LFKB2ds-MvEUKWDtI173wUF-z9Q"
+            ], 
+            "Hint": [], 
+            "ID": 35, 
+            "Points": 392
+        }
+    }, 
+    "PWN": {
+        "3step": {
+            "Description": "Gonna have to get crafty with this one.\r\n\r\nnc chal.tuctf.com 30504", 
+            "Files": [
+                "/files/c1fdbe2789041c24549fd94f62347c6a/3step?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjI3fQ.XeQ9Qg.XFhpH7VQwBwDfj18JgIBkAQti6w"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 19
+                }
+            ], 
+            "ID": 52, 
+            "Points": 490
+        }, 
+        "ctftp": {
+            "Description": "Just what the world needs... another vulnerable FTP server. Have fun.\r\n\r\nnc chal.tuctf.com 30500", 
+            "Files": [
+                "/files/d4cc89f647e9bc3b9c5b402264fd8fe0/ctftp?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjMxfQ.XeQ9Qw.sn8ffmyvKaVv5na1ZxpS2Y3TysA"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 23
+                }
+            ], 
+            "ID": 56, 
+            "Points": 497
+        }, 
+        "leakalicious": {
+            "Description": "King Arthur has proposed this challenge for all those who consider themselves worthy.\r\n\r\nnc chal.tuctf.com 30505", 
+            "Files": [
+                "/files/a97491f4a1fe6ace27660aca39f5420e/leakalicious?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjI2fQ.XeQ9QQ.KpUfo_Tu-qApDyCMJraNxf1iACw"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 18
+                }
+            ], 
+            "ID": 51, 
+            "Points": 492
+        }, 
+        "pancakes": {
+            "Description": "You ever just get a craving for pancakes?\r\n\r\nnc chal.tuctf.com 30503", 
+            "Files": [
+                "/files/165e44a9ad7ce32a6c3e6a88106e4036/pancakes?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjI4fQ.XeQ9Qg.h1_392dH61s988BWJAR0DN0UnlQ"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 20
+                }
+            ], 
+            "ID": 53, 
+            "Points": 493
+        }, 
+        "printfun": {
+            "Description": "I have made an impenetrable password checker. Just try your luck!\r\n\r\nnc chal.tuctf.com 30501", 
+            "Files": [
+                "/files/9043fa004597bab84bdfb02956c4f4f9/printfun?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjI5fQ.XeQ9Qg.OfGQvoH0hA9iyz2FiuNfmfc7ZFI"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 21
+                }
+            ], 
+            "ID": 54, 
+            "Points": 495
+        }, 
+        "runme": {
+            "Description": "Everyone starts somewhere.", 
+            "Files": [
+                "/files/e77f93907ac513eef874fd4c932e333b/runme?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjI1fQ.XeQ9QQ.bcX_SHfjouooxch0KSqx4vRIwes"
+            ], 
+            "Hint": [], 
+            "ID": 45, 
+            "Points": 25
+        }, 
+        "shellme32": {
+            "Description": "One small step for hacker's, one giant leap for pwning kind.\r\n\r\nnc chal.tuctf.com 30506", 
+            "Files": [
+                "/files/322571068d0f09e5c3cd305c1b1c8e4c/shellme32?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjIzfQ.XeQ9QQ.tD5wC8y_xxNDWLoYDcU8uY2kWYk"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 15
+                }
+            ], 
+            "ID": 43, 
+            "Points": 463
+        }, 
+        "shellme64": {
+            "Description": "Same concept, more bytes.\r\n\r\nnc chal.tuctf.com 30507", 
+            "Files": [
+                "/files/303d5c75c2c7ca91bdeb06069f587f1d/shellme64?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjI0fQ.XeQ9QQ.KySRxZXPxDzm19-bQAPwg9geNAA"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 16
+                }
+            ], 
+            "ID": 44, 
+            "Points": 473
+        }, 
+        "thefirst": {
+            "Description": "Get warmed up, we'll be here for a while.\r\n\r\nnc chal.tuctf.com 30508", 
+            "Files": [
+                "/files/0ff7d9cae507a48d338431d9f149dcb0/thefirst?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjIyfQ.XeQ9QQ.zgSTv29xxIkRZwopooIdt1eGRgQ"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 14
+                }
+            ], 
+            "ID": 41, 
+            "Points": 380
+        }, 
+        "vulnmath": {
+            "Description": "Enter the belly of the beast and emerge victorious.\r\n\r\nnc chal.tuctf.com 30502", 
+            "Files": [
+                "/files/e5f783844ba1affdedb3819e810ade34/vulnmath?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjMwfQ.XeQ9Qg.LV4AedV9MNE-IBa5DlV3uqx79tQ", 
+                "/files/b5f9e8f3f0747a3f3baef0bd97ab5dfd/libc.so.6?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjMyfQ.XeQ9Qg.PDrOjcMbc3Tiw-HWSnFUZ-JD_nc"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 22
+                }
+            ], 
+            "ID": 55, 
+            "Points": 496
+        }
+    }, 
+    "Reversing": {
+        "core": {
+            "Description": "We were able to recover a few files we need analyzed. Think you can get anything outta these?", 
+            "Files": [
+                "/files/047d024538ceda012312f262f0cc914f/core?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjE3fQ.XeQ9Qw.n-kWWSSXMsfKfNWlhjuoI8XLmws", 
+                "/files/76197641394b062beb12ccfa2c469ad3/run.c?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjE4fQ.XeQ9Qw.Np5VmE8C3Pu6Y35hYF1ZhBiOXKM"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 11
+                }
+            ], 
+            "ID": 38, 
+            "Points": 469
+        }, 
+        "faker": {
+            "Description": "One of these things is not like the other. Can you uncover the flag?", 
+            "Files": [
+                "/files/155f4e78ab9a83e96ab1de8034364bcb/faker?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjIxfQ.XeQ9Qw.zEZQsgy9EUcfygY3vt6u7cKbJOo"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 13
+                }
+            ], 
+            "ID": 40, 
+            "Points": 355
+        }, 
+        "object": {
+            "Description": "We've recovered this file but can't make much of it.", 
+            "Files": [
+                "/files/6aebbc1cec4eb30d04c14ea8df48e384/run.o?token=eyJ0ZWFtX2lkIjo3MjMsInVzZXJfaWQiOjEyNTksImZpbGVfaWQiOjIwfQ.XeQ9Qw.kcP8e_j8yn9fABWyy8Unk9lmhIY"
+            ], 
+            "Hint": [
+                {
+                    "cost": 0, 
+                    "id": 12
+                }
+            ], 
+            "ID": 39, 
+            "Points": 446
+        }
+    }, 
+    "Web": {
+        "And Now, For <br> Something Completely <br> Different": {
+            "Description": "We all know Black Friday is the time for shopping. Can you find us a flag on this online store?\r\n\r\nchal.tuctf.com:30007", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 26, 
+            "Points": 462
+        }, 
+        "Cute Animals Company": {
+            "Description": "Look at this cute website! Why don't you find some cute animals that are hidden from view?\r\n\r\nchal.tuctf.com:30000", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 28, 
+            "Points": 488
+        }, 
+        "Login to Access": {
+            "Description": "If at first you don't login, maybe back up.\r\n\r\nchal.tuctf.com:30001", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 25, 
+            "Points": 473
+        }, 
+        "Open Door": {
+            "Description": "This challenge is an open door; show us you know how to find the key.\r\n\r\nchal.tuctf.com:30002", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 22, 
+            "Points": 25
+        }, 
+        "Router Where Art Thou?": {
+            "Description": " Interesting login page, think you can crack it?\r\n\r\nchal.tuctf.com:30006", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 24, 
+            "Points": 299
+        }, 
+        "Test Test Test": {
+            "Description": "There are so many tests going on right now, why don't take a deep breath and list them out before you forget one?\r\n\r\nchal.tuctf.com:30004", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 23, 
+            "Points": 181
+        }, 
+        "The Droid You're <br> Looking For": {
+            "Description": "Sometimes you need a little Star Wars in your life to come across the flag.\r\n\r\nchal.tuctf.com:30003", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 27, 
+            "Points": 436
+        }
+    }, 
+    "Welcome": {
+        "Welcome": {
+            "Description": "Go to our Discord to get the flag: https://discord.gg/UBtxRbB", 
+            "Files": [], 
+            "Hint": [], 
+            "ID": 60, 
+            "Points": 1
+        }
+    }
+}
