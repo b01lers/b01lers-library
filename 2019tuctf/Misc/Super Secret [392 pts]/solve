@@ -1,0 +1,30 @@
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             Zip archive data, compressed size: 39, uncompressed size: 39, name: mimetype77            0x4D            Zip archive data, at least v2.0 to extract, name: manifest.rdf
+396           0x18C           Zip archive data, at least v2.0 to extract, name: Configurations2/progressbar/
+454           0x1C6           Zip archive data, at least v2.0 to extract, name: Configurations2/toolbar/508           0x1FC           Zip archive data, at least v2.0 to extract, name: Configurations2/statusbar/
+564           0x234           Zip archive data, at least v2.0 to extract, name: Configurations2/toolpanel/
+620           0x26C           Zip archive data, at least v2.0 to extract, name: Configurations2/popupmenu/676           0x2A4           Zip archive data, at least v2.0 to extract, name: Configurations2/images/Bitmaps/
+737           0x2E1           Zip archive data, at least v2.0 to extract, name: Configurations2/accelerator/795           0x31B           Zip archive data, at least v2.0 to extract, name: Configurations2/floater/
+849           0x351           Zip archive data, at least v2.0 to extract, name: Configurations2/menubar/
+903           0x387           Zip archive data, at least v2.0 to extract, name: content.xml2097          0x831           Zip archive data, at least v2.0 to extract, name: styles.xml
+4206          0x106E          Zip archive data, at least v2.0 to extract, name: meta.xml
+4714          0x126A          Zip archive data, at least v2.0 to extract, name: Basic/Standard/flag.xml
+5051          0x13BB          Zip archive data, at least v2.0 to extract, name: Basic/Standard/script-lb.xml
+5337          0x14D9          Zip archive data, at least v2.0 to extract, name: Basic/script-lc.xml
+5613          0x15ED          Zip archive data, at least v2.0 to extract, name: settings.xml
+7356          0x1CBC          Zip archive data, at least v2.0 to extract, compressed size: 3983, uncompressed size: 3983, name: Thumbnails/thumbnail.png
+11393         0x2C81          Zip archive data, at least v2.0 to extract, name: META-INF/manifest.xml
+13126         0x3346          End of Zip archive, footer length: 22
+
+a0su@a0su:~/Documents/CTF/2019/TUCTF/Misc/SuperSecret$ cd _document.odt.extracted/
+a0su@a0su:~/Documents/CTF/2019/TUCTF/Misc/SuperSecret/_document.odt.extracted$ ls
+0.zip  Configurations2  manifest.rdf  meta.xml  settings.xml  Thumbnails
+Basic  content.xml      META-INF      mimetype  styles.xml
+a0su@a0su:~/Documents/CTF/2019/TUCTF/Misc/SuperSecret/_document.odt.extracted$ cd Basic/Standard/
+a0su@a0su:~/Documents/CTF/2019/TUCTF/Misc/SuperSecret/_document.odt.extracted/Basic/Standard$ ls
+flag.xml  script-lb.xml
+a0su@a0su:~/Documents/CTF/2019/TUCTF/Misc/SuperSecret/_document.odt.extracted/Basic/Standard$ strings flag.xml | grep "TU"
+TUCTF{ST0P_TRUST1NG_M4CR0S_FR0M_4N_UNKN0WN_S0URC3}
+a0su@a0su:~/Documents/CTF/2019/TUCTF/Misc/SuperSecret/_document.odt.extracted/Basic/Standard$ 
