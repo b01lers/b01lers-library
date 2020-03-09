@@ -1,0 +1,3 @@
+[submodule "CTFdScraper/CTFdScraper"]
+	path = CTFdScraper/CTFdScraper
+	url = https://github.com/ichinano/CTFdScraper

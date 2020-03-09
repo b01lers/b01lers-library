@@ -1,0 +1,483 @@
+{
+    "data": {
+        "Binary Exploitation": [
+            {
+                "category": "Binary Exploitation", 
+                "description": "I got this sketchy ROM file from a friend. Can you retrieve the redacted part near the beginning?\r\n\r\n```nc 3.91.17.218 9002```\r\n\r\n_by gg_", 
+                "files": [
+                    "/files/0924ca2016410704f5522616bc41a3f3/gbtas.jar?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoxOH0.XmWmPQ.QTS9X9UuCjnIO0soNFQJxgxr7Vs", 
+                    "/files/72573bc11cd139c3491534ce04f04597/utctf.gb?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoxOX0.XmWmPQ.egJLbjtpVpGly6BRSynApqEi6aE"
+                ], 
+                "hints": [], 
+                "id": 9, 
+                "name": "Game Boy TAS", 
+                "points": 1991, 
+                "solves": 8
+            }, 
+            {
+                "category": "Binary Exploitation", 
+                "description": "`nc sgx.utctf.live 9000`\r\n\r\nThe `sim_binary` directory contains a binary built for sgx-simulated mode. This can be run on any processor provided that the package `sgx-sdk` is installed.\r\n\r\nThe `hw_binary` directory will not work unless you have an sgx-capable cpu with `sgx-sdk`, `sgx-psw` and `sgx-drivers`.\r\n\r\nWritten by: `hk`", 
+                "files": [
+                    "/files/08e836f6c3650910e892bcb44de24726/sgx-flag-vault.tgz?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0NX0.XmWmPQ.nskOII_-iajlMgjXsEFKqvjIOE8"
+                ], 
+                "hints": [], 
+                "id": 14, 
+                "name": "sgx flag vault", 
+                "points": 1997, 
+                "solves": 5
+            }, 
+            {
+                "category": "Binary Exploitation", 
+                "description": "I found a dns implementation on github for this problem.\r\n\r\n`drill -p 54 foo.bar.com @binary.utctf.live`\r\n\r\n_by hk_", 
+                "files": [
+                    "/files/21a65479f2d835e25e028649e0c77492/pwnable?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoyNX0.XmWmPQ.neIAhs90igu5uAYignfL6KwaSJ8"
+                ], 
+                "hints": [], 
+                "id": 15, 
+                "name": "dns", 
+                "points": 1951, 
+                "solves": 17
+            }, 
+            {
+                "category": "Binary Exploitation", 
+                "description": "We should cancel all pwners.\r\n\r\n`nc binary.utctf.live 9050`\r\n\r\n_by jitterbug_", 
+                "files": [
+                    "/files/3db39698ea61a03e3bb9d5512499a2d6/pwnable?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozOX0.XmWmPQ.Kl1Q7ShtCf4VgravSwZwSoI-v8Q", 
+                    "/files/34f662a25050f974e6be7cfbae855bce/libc-2.27.so?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0MH0.XmWmPQ.K8sbHima5nOlFfaQJ_wwi8Pu3rw"
+                ], 
+                "hints": [], 
+                "id": 22, 
+                "name": "Cancelled", 
+                "points": 1879, 
+                "solves": 26
+            }, 
+            {
+                "category": "Binary Exploitation", 
+                "description": "`nc binary.utctf.live 9002`", 
+                "files": [
+                    "/files/ebb2fde6b2c3584bcd0f9550b727ba60/pwnable?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozM30.XmWmPQ.rmZd8Z-giYTBQLgolaViCy03MAs"
+                ], 
+                "hints": [], 
+                "id": 25, 
+                "name": "bof", 
+                "points": 50, 
+                "solves": 209
+            }, 
+            {
+                "category": "Binary Exploitation", 
+                "description": "`nc binary.utctf.live 9003`\r\n\r\n_by: hk_", 
+                "files": [
+                    "/files/62db628d806d9975fc1753b5e2ff4152/pwnable?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo1Mn0.XmWmPg.jeunYRu0kkC0cxh0fKtCPdfY0NY", 
+                    "/files/7cfc0f093ac7c83ea2931bd652bc7927/libc-2.23.so?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo1M30.XmWmPg.UVmwkHUqqzL1feshzFJfBBn4Ikg"
+                ], 
+                "hints": [], 
+                "id": 44, 
+                "name": "zurk", 
+                "points": 752, 
+                "solves": 81
+            }, 
+            {
+                "category": "Binary Exploitation", 
+                "description": "You've recently been imprisoned for trying to outpizza the hut. Fortunately, your guard, Simplicio, seems to be pretty smooth brained. \r\n\r\nNote: the flag is in /root/flag.txt.\r\n\r\n`nc kernel.utctf.live 9051`\r\n\r\n_by jitterbug_\r\n\r\n\r\n", 
+                "files": [
+                    "/files/5cce6bcb5a22f4ecb9b5e265f52e8846/simp.tar.gz?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo1NH0.XmWmPw.nWl8HhT3DdIiIBp_CtNu0q8oO98"
+                ], 
+                "hints": [], 
+                "id": 49, 
+                "name": "Simplicio's Jail", 
+                "points": 1991, 
+                "solves": 8
+            }
+        ], 
+        "Cryptography": [
+            {
+                "category": "Cryptography", 
+                "description": "My friend Shamir was trying to share the flag with me and some of the other problem writers, but he wanted to make sure it didn't get intercepted in transmission, so he split it up. He said that the secrets that he shared will help us find the flag, but I can't figure it out! These are the secrets I've gathered so far:\r\n\r\n```\r\n(C81E728D9D4C2F636F067F89CC14862C, 31E96A93BF1A7CE1872A3CCDA6E07F86)\r\n(ECCBC87E4B5CE2FE28308FD9F2A7BAF3, ADF6E4F1052BDE978344743CCDCF5771)\r\n(E4DA3B7FBBCE2345D7772B0674A318D5, 0668FBCFE4098FEA0218163AC21E6531)\r\n```\r\n\r\nCan you figure out which flag is the right one?\r\n\r\n_by balex_", 
+                "files": [
+                    "/files/bd245ef01db53a5e347fe0859f1cdc3c/flags.txt?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoyN30.XmWmPQ.nSWWK5kfq80TSNDPA9jTq8anDKE"
+                ], 
+                "hints": [], 
+                "id": 18, 
+                "name": "Curveball", 
+                "points": 1606, 
+                "solves": 46
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "```nc crypto.utctf.live 9004```\r\n\r\n_by dmanc_", 
+                "files": [
+                    "/files/57492f8335854a38ebf2a253dc8408d2/server.py?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozNX0.XmWmPg.LEglGxU-SZGKuw4kCLuIQZcph7k"
+                ], 
+                "hints": [], 
+                "id": 27, 
+                "name": "Galois", 
+                "points": 1072, 
+                "solves": 70
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "```nc ecb.utctf.live 9003```\r\n\r\n_by dmanc_", 
+                "files": [
+                    "/files/14247a9c4f9257df73436cfce655cf29/server.py?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozNH0.XmWmPg.dnwQAVwxokMdk3wXGOFxpa9zVwM"
+                ], 
+                "hints": [], 
+                "id": 26, 
+                "name": "Random ECB", 
+                "points": 50, 
+                "solves": 117
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "Found this weird hash function, can you figure it out?\r\n\r\n```nc super.utctf.live 9005```\r\n\r\n_by dmanc_", 
+                "files": [
+                    "/files/d3309ac739bbe09ed6eb7edc3195034f/hash.sage?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozNn0.XmWmPg.tjAnNccBvZQntD8vcQe4-HUZtRk"
+                ], 
+                "hints": [], 
+                "id": 28, 
+                "name": "Weird Walks", 
+                "points": 1897, 
+                "solves": 24
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "Can you make it through all of the encodings?\r\n\r\n_by balex_", 
+                "files": [
+                    "/files/f4a1065f03890f2c27a229fdbd6f2c6f/binary.txt?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0MX0.XmWmPg.R5afyFNz-rxVn87R3_UeeJ2WG6I"
+                ], 
+                "hints": [], 
+                "id": 35, 
+                "name": "[basics] crypto", 
+                "points": 50, 
+                "solves": 682
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "Two of my friends were arguing about which CTF category is the best, but they encrypted it because they didn't want anyone to see. Lucky for us, they reused the same key; can you recover it?\r\n\r\nHere are the ciphertexts:\r\n```\r\n213c234c2322282057730b32492e720b35732b2124553d354c22352224237f1826283d7b0651\r\n\r\n3b3b463829225b3632630b542623767f39674431343b353435412223243b7f162028397a103e\r\n```\r\n\r\n_by balex_", 
+                "files": [], 
+                "hints": [], 
+                "id": 38, 
+                "name": "One True Problem", 
+                "points": 50, 
+                "solves": 195
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "I found these characters on top of a hill covered with algae ... bruh I can't figure it out can you help me?\r\n\r\n```wznqca{d4uqop0fk_q1nwofDbzg_eu}```\r\n\r\nby bnuno", 
+                "files": [], 
+                "hints": [], 
+                "id": 42, 
+                "name": "Hill", 
+                "points": 241, 
+                "solves": 96
+            }, 
+            {
+                "category": "Cryptography", 
+                "description": "Mr. Anshel and Mr. Goldfeld were trying to exchange some asymmetric keys to get a shared key. They aren't very good at math, so they decided to use a Rubik's Cube instead to do the crypto. I don't think it's very secure though, I think you might be able to guess some of their keys :hmm:\r\n\r\n```\r\nMr. A public key: [B' U', F B F, R' D, B D']\r\nMr. G public key: [R D L', D U' B, U F', L' F]\r\n\r\nMr. A sends: [B D' R' D R D L' D' R D B', B D' R' D D U' B D' R D B', B D' R' D U F' D' R D B', B D' R' D L' F D' R D B']\r\nMr. G sends: [U F' R D L' B' U' L D' R' F U', U F' R D L' F B F L D' R' F U', U F' R D L' R' D L D' R' F U', U F' R D L' B D' L D' R' F U']\r\n```\r\n\r\n**NOTE: The flag is the shared key that they generate, so it is NOT in `utflag{}` format**\r\n\r\n_by balex_", 
+                "files": [], 
+                "hints": [], 
+                "id": 45, 
+                "name": "Cube Crypto", 
+                "points": 1657, 
+                "solves": 43
+            }
+        ], 
+        "Forensics": [
+            {
+                "category": "Forensics", 
+                "description": "A simple image with a couple of twists...\r\n\r\nby phleisch", 
+                "files": [
+                    "/files/765a181c3b0d1d52d9a095e9e4994473/Griffith_Observatory.png?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozN30.XmWmPg.ef0jJRiJP5hpAqZ8D32kataBaZM"
+                ], 
+                "hints": [], 
+                "id": 29, 
+                "name": "Observe Closely", 
+                "points": 50, 
+                "solves": 531
+            }, 
+            {
+                "category": "Forensics", 
+                "description": "I recently received this signal transmission known as SSTV in a mode called Martian? This technology is all very old so I'm not sure what to do with it. Could you help me out?\r\n\r\nby phleisch", 
+                "files": [
+                    "/files/9302667b9ce7978607014801f95f59ff/signals.wav?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0Nn0.XmWmPg.oy1RlV85h-GZ_EJaz3UdOe3oS_Q"
+                ], 
+                "hints": [], 
+                "id": 31, 
+                "name": "1 Frame per Minute", 
+                "points": 50, 
+                "solves": 327
+            }, 
+            {
+                "category": "Forensics", 
+                "description": "My friend said they hid a flag in this picture, but it's broken! Now that I think about it, I don't even know if it really is a picture...\r\n\r\n_by balex_", 
+                "files": [
+                    "/files/a33c7d26e7b98136fe02ec6ca0b1fe89/secret.jpeg?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0N30.XmWmPg.H1mS4vfHXfh-oADOntYbc88-jHY"
+                ], 
+                "hints": [], 
+                "id": 36, 
+                "name": "[basics] forensics", 
+                "points": 50, 
+                "solves": 658
+            }, 
+            {
+                "category": "Forensics", 
+                "description": "I found this audio file, but I don't think it's any song I've ever heard... Maybe there's something else inside?\r\n\r\n_by balex_", 
+                "files": [
+                    "/files/3b9d84b7723a1e841fa97763404b43c9/song.wav?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0M30.XmWmPg.V12sw6M0dL3Ub8lt-k5G3Hb_PQY"
+                ], 
+                "hints": [], 
+                "id": 39, 
+                "name": "Spectre", 
+                "points": 50, 
+                "solves": 433
+            }, 
+            {
+                "category": "Forensics", 
+                "description": "This file seems to be too large given how much text it contains, but I can find zero evidence of the flag. Maybe you'll have better luck than me?\r\n\r\nby bnuno ", 
+                "files": [
+                    "/files/c047355f9d627ad532b4f374cc39b28a/zero.txt?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo1NX0.XmWmPg.oykWjwjgenanHsqULrooqQGy38Q"
+                ], 
+                "hints": [], 
+                "id": 43, 
+                "name": "Zero ", 
+                "points": 50, 
+                "solves": 142
+            }, 
+            {
+                "category": "Forensics", 
+                "description": "My friend Hackerman tried to send me a secret transmission, but I think some of it got messed up in transit. Can you fix it?\r\n\r\n_by balex_", 
+                "files": [
+                    "/files/c7fb380d13e9c43c381d5605e8ff7323/hackerman.png?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo1Nn0.XmWmPw.sltDyT_YRP5NYZ9uaZuzrGoKZsk"
+                ], 
+                "hints": [], 
+                "id": 51, 
+                "name": "The Legend of Hackerman, Pt. 1", 
+                "points": 50, 
+                "solves": 267
+            }, 
+            {
+                "category": "Forensics", 
+                "description": "Ok, I've received another file from Hackerman, but it's just a Word Document? He said that he attached a picture of the flag, but I can't find it...\r\n\r\n_by balex_", 
+                "files": [
+                    "/files/04595a81007d34f05b427732bdd0300c/Hacker.docx?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo1N30.XmWmPw.YzgLhuNW4xhEJTnl5lGA-nsg_oM"
+                ], 
+                "hints": [], 
+                "id": 52, 
+                "name": "The Legend of Hackerman, Pt. 2", 
+                "points": 50, 
+                "solves": 302
+            }
+        ], 
+        "Misc": [
+            {
+                "category": "Misc", 
+                "description": "The flag is `utflag{this_is_the_flag}`! Welcome to UTCTF!", 
+                "files": [], 
+                "hints": [], 
+                "id": 46, 
+                "name": "Sanity Check", 
+                "points": 1, 
+                "solves": 871
+            }, 
+            {
+                "category": "Misc", 
+                "description": "Fill out this quick 1-minute survey to get the flag!\r\n\r\n[link](https://docs.google.com/forms/d/e/1FAIpQLScEPPnT2eVXl_--Ztm4a6HL94_iVPWNxev6YseKbmLUfsh0IA/viewform?usp=sf_link)", 
+                "files": [], 
+                "hints": [], 
+                "id": 50, 
+                "name": "Survey", 
+                "points": 1, 
+                "solves": 401
+            }
+        ], 
+        "Networking": [
+            {
+                "category": "Networking", 
+                "description": "I found some weird data while monitoring my network, but I didn't catch it all. See if you can make sense of it.\r\n\r\n_by masond_", 
+                "files": [
+                    "/files/94cfabda5be3962c04675b0538d34254/capture.pcap?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozMX0.XmWmPQ.hdF2bH19MHW4VYdd-DYrTaGYv4o"
+                ], 
+                "hints": [], 
+                "id": 19, 
+                "name": "Nittaku 3 Star Premium", 
+                "points": 203, 
+                "solves": 97
+            }, 
+            {
+                "category": "Networking", 
+                "description": "One of my servers was compromised, but I can't figure it out. See if you can solve it for me!\r\n\r\n_by masond_", 
+                "files": [
+                    "/files/9097a400c225117ecc5e13d6dce2f769/capture.pcap?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozOH0.XmWmPg.Nh6RU75jRMJ6o4RLlSprg3P3QIA"
+                ], 
+                "hints": [], 
+                "id": 30, 
+                "name": "Do Not Stop", 
+                "points": 50, 
+                "solves": 137
+            }, 
+            {
+                "category": "Networking", 
+                "description": "I have a pretty cool server, but it's for QUICk people only. Nobody else is allowed.\r\n\r\n`54.152.23.18:1337`\r\n\r\nPro Tip: Set your ALPN to \"quic-echo-example\" because I forgot to remove it.\r\n\r\n_by masond_", 
+                "files": [], 
+                "hints": [], 
+                "id": 34, 
+                "name": "QUICk Servers", 
+                "points": 1988, 
+                "solves": 17
+            }
+        ], 
+        "Reverse Engineering": [
+            {
+                "category": "Reverse Engineering", 
+                "description": "Get all perfect to decrypt the flag.\r\n\r\n_by gg_", 
+                "files": [
+                    "/files/775c582b21285eb9f7a9bdc8033d4788/rhythm-mac.zip?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoyOH0.XmWmPQ.p5230vFGGG-y4Q5idzz3ccIHLqw", 
+                    "/files/89b59468490782dab048e826298c9446/rhythm-linux.zip?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoyOX0.XmWmPQ.1sgA68GE6zNYB-ltj4uN4j8p924", 
+                    "/files/acd5cd7ad4ef57a595f353d1e825b1ae/rhythm-windows.zip?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozMH0.XmWmPQ.K_dFA6hcH7NfzPmABghagiYRaFc"
+                ], 
+                "hints": [], 
+                "id": 8, 
+                "name": "Rhythm Game Vault", 
+                "points": 1972, 
+                "solves": 13
+            }, 
+            {
+                "category": "Reverse Engineering", 
+                "description": "what's the flag?\r\n\r\nby Dan", 
+                "files": [
+                    "/files/49ebdc3b90ad1c3b944e7b4bc7808e3d/baby?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoyMH0.XmWmPQ.dIu5oYN4y-rlJ1NufXFc4eSL7sg"
+                ], 
+                "hints": [], 
+                "id": 11, 
+                "name": "babymips", 
+                "points": 50, 
+                "solves": 121
+            }, 
+            {
+                "category": "Reverse Engineering", 
+                "description": "what's the flag?\r\n\r\nby Dan", 
+                "files": [
+                    "/files/522355aae09ac8fde4986009ccf63a67/tigress?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoyMX0.XmWmPQ.FUmRYBN4rcyQQMlcWU09E2_fJ_w"
+                ], 
+                "hints": [], 
+                "id": 12, 
+                "name": "tigress", 
+                "points": 1981, 
+                "solves": 11
+            }, 
+            {
+                "category": "Reverse Engineering", 
+                "description": "You've been contracted to check an IoT vault for a potential backdoor. Your goal is to figure out the sequence that unlocks the vault and use it to create the flag. Unfortunately, you were unable to acquire the hardware and only have a schematic drawn by the vault company's intern, a firmware dump and the model number of the microcontroller.\r\n\r\nThe flag has the following format:\r\nutflag{P<PORT_LETTER><PORT_NUMBER>} , ex:\r\nutflag{PD0,PD2}\r\n\r\nby Dan", 
+                "files": [
+                    "/files/04e465bfe89ff5969fce45c5e331ccb2/schema.png?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjoyMn0.XmWmPQ.1NLeXLilx3HUuI1g80-FHqgB0zg", 
+                    "/files/58a13d4cf3a55f8368490f448daf44ef/UTCTF_VAULT.axf?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0OH0.XmWmPQ.FX0mhBG4hIWpiJYQdJHHIlR15BU"
+                ], 
+                "hints": [], 
+                "id": 13, 
+                "name": "The Securest Vault \u2122 ", 
+                "points": 1988, 
+                "solves": 9
+            }, 
+            {
+                "category": "Reverse Engineering", 
+                "description": "Convince your crush to go out with you. Note: the flag is what you need to say to convince him/her to go out with you.\r\n\r\n_by jitterbug_", 
+                "files": [
+                    "/files/6f52d782e10408375ac53d1d41bc9c4c/crackme?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0NH0.XmWmPQ.CGs8CNfVG_RLCN8v3LE--GizaQc"
+                ], 
+                "hints": [], 
+                "id": 23, 
+                "name": "Crack the Heart", 
+                "points": 1411, 
+                "solves": 56
+            }, 
+            {
+                "category": "Reverse Engineering", 
+                "description": "We found this snippet of code on our employee's laptop. It looks really scary. Can you figure out what it does?\r\n\r\nWritten by `hk`", 
+                "files": [
+                    "/files/1ba69922f100850ea1f95d5e9a02353c/chal.e?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjozMn0.XmWmPQ.SPq2g04Wn9ZrHHUT8U9FY8SBF_o"
+                ], 
+                "hints": [], 
+                "id": 24, 
+                "name": "IR", 
+                "points": 1588, 
+                "solves": 47
+            }, 
+            {
+                "category": "Reverse Engineering", 
+                "description": "I know there's a string in this binary somewhere.... Now where did I leave it?\r\n\r\n_by balex_", 
+                "files": [
+                    "/files/1a864834dba549a5791338b7bdbb3e24/calc?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0Mn0.XmWmPg.PaksKQdrqV0Gq8U_gAFfQ0MNZW4"
+                ], 
+                "hints": [], 
+                "id": 37, 
+                "name": "[basics] reverse engineering", 
+                "points": 50, 
+                "solves": 680
+            }, 
+            {
+                "category": "Reverse Engineering", 
+                "description": "In an effort to get rid of all of the bloat in the .png format, I'm proud to announce .PNG2! The first pixel is #7F7F7F, can you get the rest of the image?\r\n\r\nby bnuno", 
+                "files": [
+                    "/files/dd182ccb50276e063b7ccbb1bea3b920/pic.png2?token=eyJ0ZWFtX2lkIjoxMjg5LCJ1c2VyX2lkIjoyMzY0LCJmaWxlX2lkIjo0OX0.XmWmPg.5ZVPXUHqeygbiJtPx9WFmOooFoI"
+                ], 
+                "hints": [], 
+                "id": 41, 
+                "name": ".PNG2", 
+                "points": 50, 
+                "solves": 141
+            }
+        ], 
+        "Web": [
+            {
+                "category": "Web", 
+                "description": "[link](http://wasmfans.ga)\r\n\r\n_by gg_", 
+                "files": [], 
+                "hints": [], 
+                "id": 7, 
+                "name": "Wasm Fans Only", 
+                "points": 1951, 
+                "solves": 17
+            }, 
+            {
+                "category": "Web", 
+                "description": "[link](http://3.91.17.218/)\r\n\r\nShrek seems to be pretty angry about something, so he deleted some important information off his site. He murmured something about Donkey being too *committed* to infiltrate his swamp. Can you *checkout* the site and see what the *status* is?\r\n\r\n_by gg_", 
+                "files": [], 
+                "hints": [], 
+                "id": 10, 
+                "name": "Shrek Fans Only", 
+                "points": 50, 
+                "solves": 164
+            }, 
+            {
+                "category": "Web", 
+                "description": "It's a simple webpage with 3 buttons, you got this :)\r\n\r\n[link](http://web1.utctf.live:5005/)\r\n\r\n_by matt_", 
+                "files": [], 
+                "hints": [], 
+                "id": 16, 
+                "name": "spooky store", 
+                "points": 50, 
+                "solves": 255
+            }, 
+            {
+                "category": "Web", 
+                "description": "this challenge is epic i promise\r\n\r\nthe flag is the password\r\n\r\n[link](http://web2.utctf.live:5006/)\r\n\r\n_by matt_", 
+                "files": [], 
+                "hints": [], 
+                "id": 17, 
+                "name": "epic admin pwn", 
+                "points": 50, 
+                "solves": 268
+            }, 
+            {
+                "category": "Web", 
+                "description": "After announcing that he would be having an anonymous 1-on-1 AMA with randomly chosen, adoring fans, an engineering team hacked together a web app and likely forget to patch some obvious security holes. Anyway, you're one of the lucky fans chosen to chatt with Bratt Pid! Have fun: [web3.utctf.live:8080](http://web3.utctf.live:8080)\r\n\r\n_by phleisch_", 
+                "files": [], 
+                "hints": [], 
+                "id": 32, 
+                "name": "Chatt with Bratt", 
+                "points": 50, 
+                "solves": 107
+            }
+        ]
+    }, 
+    "url": "https://utctf.live"
+}

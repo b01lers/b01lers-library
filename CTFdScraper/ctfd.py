@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-from cfscrape import *
+#from cfscrape import *
 from requests import session
 from bs4 import BeautifulSoup
 import json, os, requests, re,sys
