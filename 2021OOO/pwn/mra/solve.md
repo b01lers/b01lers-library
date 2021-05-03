@@ -273,7 +273,7 @@ The key is this block:
 0x004085cc ret
 ```
 
-What this does is it just loads the first 7 things starting from `$sp-8` into registers (first one being the syscall number) and executes a `svc` which is a supervisor call (basically equivalent to `int 0x80` or `syscall` on x86_64). We control everything on the stack up to this point, so we can leverage this to execute any syscall we want with any arguments. Naturally, I'll do `execve("/bin/sh\x00", NULL, NULL);`. We have a problem though, I don't have a stack leak (and can't get one), and I still need that first argument in `x0` to be a pointer to `/bin/sh\x00`. My solution to this is to execute two syscalls:
+What this does is it just loads the first 7 things starting from `$sp-8` into registers (first one being the syscall number) and executes a `svc` which is a supervisor call (basically equivalent to `int 0x80` or `syscall` on x86_64). We control everything on the stack up to this point, so we can leverage this to execute any syscall we want with any arguments. Naturally, I'll do `execve("/bin/sh\x00", NULL, NULL);`. We have a problem though, I don't have a stack leak (and can't get one super easily), and I still need that first argument in `x0` to be a pointer to `/bin/sh\x00`. My solution to this is to execute two syscalls:
 
 1. `read` into an area in `.data` with a particular address (thanks no-pie!) the string `/bin/sh\x00`.
 2. `execve` now with the first argument as that pointer.
