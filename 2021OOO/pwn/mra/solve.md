@@ -32,7 +32,7 @@ As usual, we want to start by finding main. Luckily here that's pretty easy, it'
 In main, we'll see several function calls. I'll briefly explain what made me guess each one (I ended up being 100% right!).
 
 1. `fcn.00401018(**(int64_t **)0x41cf80, 0, 2, 0);` clearly this is setvbuf. lol.
-2. `fcn.00401018(**(int64_t **)0x41cf80, 0, 2, 0);` you can either guess from params or just look at [the source](https://github.com/bminor/glibc/blob/3cc4a8367c23582b7db14cf4e150e4068b7fd461/string/memset.c) that this is definitely memset with all its weird optimized copies. Never change, glibc. No seriously, don't change or these challenges will be much harder.
+2. `fcn.00405ba0` you can either guess from params or just look at [the source](https://github.com/bminor/glibc/blob/3cc4a8367c23582b7db14cf4e150e4068b7fd461/string/memset.c) that this is definitely memset with all its weird optimized copies. Never change, glibc. No seriously, don't change or these challenges will be much harder.
 3. `uStack28 = fcn.004064f8(0, (int64_t)auStack1128, 0x3ff);` This one is a little trickier. If we click into it, we'll see this is basically a wrapper for `fcn.00408624` which in turn wraps `fcn.00408588`:
 
 ```asm
